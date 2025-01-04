@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:lk_cric_park/data/firebase/authentication/authentication_repository.dart';
 
 class SplashController extends GetxController {
 
@@ -9,7 +10,7 @@ class SplashController extends GetxController {
     // TODO: implement onInit
     super.onInit();
     Future.delayed(const Duration(seconds: 2),() {
-      // AuthService.screenRedirect();
+      AuthenticationRepository.instance.screenRedirect();
     });
   }
 }

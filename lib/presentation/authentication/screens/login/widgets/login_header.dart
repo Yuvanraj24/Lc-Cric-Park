@@ -11,16 +11,22 @@ class SiajLoginHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Image(
-          height: 150,
-          image: AssetImage(
-              AppImages.appLogo)),
-      Text(AppTextStrings.loginTitle,
-          style: Theme.of(context).textTheme.headlineMedium),
-      const SizedBox(height: AppSizes.sm),
-      Text(AppTextStrings.loginSubTitle,
-          style: Theme.of(context).textTheme.bodyMedium),
-    ]);
+
+    return  Image(
+        height: 200,
+        image: AssetImage(
+            AppImages.appLogoWithoutBg));
+
+    // return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+    //   Image(
+    //       height: 150,
+    //       image: AssetImage(
+    //           AppImages.appLogoWithoutBg)),
+    //   Text(AppTextStrings.loginTitle,
+    //       style: Theme.of(context).textTheme.headlineMedium),
+    //   const SizedBox(height: AppSizes.sm),
+    //   Text(AppTextStrings.loginSubTitle,
+    //       style: Theme.of(context).textTheme.bodyMedium),
+    // ]);
   }
 }

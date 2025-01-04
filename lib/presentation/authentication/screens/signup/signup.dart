@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:lk_cric_park/core/assets/texts.dart';
 import 'package:lk_cric_park/core/constants/app_sizes.dart';
+import 'package:lk_cric_park/core/theme/color.dart';
 import 'package:lk_cric_park/presentation/authentication/screens/signup/widgets/signup_form.dart';
 
 
@@ -11,6 +11,7 @@ class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.primaryColor,
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(

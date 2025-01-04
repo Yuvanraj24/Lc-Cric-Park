@@ -41,6 +41,12 @@ class AppTextStrings {
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
 
+  static const String loginSignUpLabelText = 'Don’t have an account? ';
+  static const String loginSignUpBtnText = 'SignUp';
+
+  static const String signupLoginUpLabelText = 'Already have an account? ';
+  static const String signupLoginBtnText = 'Login';
+
 
 
 

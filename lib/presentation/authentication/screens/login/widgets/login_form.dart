@@ -75,15 +75,8 @@ class SiajLoginForm extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                       onPressed: () =>  controller.emailAndPasswordSignIn(), child: const Text(AppTextStrings.signIn))),
-              const SizedBox(height: AppSizes.spaceBtwItems),
 
-              /// Create Account Button
-              SizedBox(
-                  width: double.infinity,
-                  child: OutlinedButton(
-                      onPressed: () => Get.to(() => const SignupScreen()),
 
-                      child:  Text(AppTextStrings.signUp,style: TextStyle(color: Colors.black),))),
             ],
           ),
         ));

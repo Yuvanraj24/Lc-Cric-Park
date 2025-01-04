@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -23,9 +22,9 @@ class AuthenticationRepository extends GetxController {
   /// Call from main.dart on app Launch
   @override
   void onReady() {
-
+    print("On Ready Authentication");
     // Redirect to the appropriate  screen
-    screenRedirect();
+    // screenRedirect();
   }
 
   /// Functions to determine the relevant screen and redirect accordingly

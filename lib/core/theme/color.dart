@@ -12,8 +12,6 @@ class AppColors {
 
   static const Color greyLight = Color(0xFF6C7278);
 
-
-
   // Gradients
   static const LinearGradient yellowToOrangeGradient = LinearGradient(
     begin: Alignment.topCenter,
