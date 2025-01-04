@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "516554806777",
+    "project_id": "lk-cric-park",
+    "storage_bucket": "lk-cric-park.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516554806777:android:e6671a84ca46dfe17b5928",
+        "android_client_info": {
+          "package_name": "com.k.lk_cric_park"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjwO4mmeb3u7Sj3OTV6k0BJQib11JHv5I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
