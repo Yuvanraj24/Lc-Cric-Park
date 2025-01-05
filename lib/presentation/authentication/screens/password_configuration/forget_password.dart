@@ -6,12 +6,11 @@ import 'package:lk_cric_park/core/constants/app_sizes.dart';
 import 'package:lk_cric_park/presentation/authentication/controllers/forget_password/forget_password_controller.dart';
 import 'package:lk_cric_park/utils/validators/validation.dart';
 
-class ForgetPassword extends StatelessWidget {
+class ForgetPassword extends GetView<ForgetPasswordController> {
   const ForgetPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(ForgetPasswordController());
     return Scaffold(
       appBar: AppBar(),
       body: Padding(

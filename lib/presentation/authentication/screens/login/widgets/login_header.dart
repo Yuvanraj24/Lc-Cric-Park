@@ -16,17 +16,5 @@ class SiajLoginHeader extends StatelessWidget {
         height: 200,
         image: AssetImage(
             AppImages.appLogoWithoutBg));
-
-    // return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-    //   Image(
-    //       height: 150,
-    //       image: AssetImage(
-    //           AppImages.appLogoWithoutBg)),
-    //   Text(AppTextStrings.loginTitle,
-    //       style: Theme.of(context).textTheme.headlineMedium),
-    //   const SizedBox(height: AppSizes.sm),
-    //   Text(AppTextStrings.loginSubTitle,
-    //       style: Theme.of(context).textTheme.bodyMedium),
-    // ]);
   }
 }

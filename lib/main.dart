@@ -4,15 +4,17 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:lk_cric_park/core/routes/pages.dart';
 import 'package:lk_cric_park/core/theme/theme.dart';
+import 'package:lk_cric_park/presentation/authentication/bindings/signup/verification_email_binding.dart';
 
 import 'data/firebase/authentication/authentication_repository.dart';
+import 'data/services/network_manager/network_manager.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
-
+  Get.put(NetworkManager());
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   ).then((FirebaseApp value) => Get.put(AuthenticationRepository()));
@@ -29,7 +31,8 @@ class MyApp extends StatelessWidget {
       theme: SiajAppTheme.darkTheme,
       darkTheme: SiajAppTheme.darkTheme,
       getPages: AppRoutes.pages,
-      initialRoute: Routes.splash
+      initialRoute: Routes.splash,
+        initialBinding: VerificationEmailBinding(),
     );
   }
 }

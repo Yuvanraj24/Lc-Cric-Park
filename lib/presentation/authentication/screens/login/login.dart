@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:lk_cric_park/core/theme/color.dart';
 import 'package:lk_cric_park/presentation/authentication/screens/login/widgets/login_form.dart';
 import 'package:lk_cric_park/presentation/authentication/screens/login/widgets/login_header.dart';

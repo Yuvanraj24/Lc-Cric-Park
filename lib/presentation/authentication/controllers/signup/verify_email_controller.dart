@@ -10,6 +10,9 @@ import 'package:lk_cric_park/widgets_common/success_screen/success_screen.dart';
 class VerifyEmailController extends GetxController {
   static VerifyEmailController get instance => Get.find();
 
+
+  String userEmail = "";
+
   /// Send Email whenever verify screen appears & set timer for auto redirect
   @override
   void onInit() {

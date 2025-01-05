@@ -4,9 +4,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:lk_cric_park/core/routes/pages.dart';
 import 'package:lk_cric_park/data/firebase/user/user_repository.dart';
-import 'package:lk_cric_park/presentation/authentication/screens/login/login.dart';
-import 'package:lk_cric_park/presentation/authentication/screens/onboarding/onboarding.dart';
-import 'package:lk_cric_park/presentation/authentication/screens/signup/verify_email.dart';
+import 'package:lk_cric_park/presentation/authentication/controllers/signup/verify_email_controller.dart';
 
 
 class AuthenticationRepository extends GetxController {
@@ -36,8 +34,16 @@ class AuthenticationRepository extends GetxController {
         // If the user's email is verified, navigate to the main Navigation Menu
         Get.offAllNamed(Routes.mainView);
       } else {
+
+        Get.put(VerifyEmailController());
+        VerifyEmailController.instance.userEmail = _auth.currentUser?.email ?? '';
         // If the user's email is not verified, navigate to the main Verification Email Screen
-        Get.offAll(() => VerifyEmailScreen(email: _auth.currentUser?.email));
+        Get.offAllNamed(Routes.verifyEmailView);
+
+        // Get.offAllNamed(
+        //   '/verify-email',
+        //   arguments: {'email': _auth.currentUser?.email},
+        // );
       }
     } else {
       // Local Storage
@@ -45,8 +51,8 @@ class AuthenticationRepository extends GetxController {
 
       // Check if it's the first time launching the app
       deviceStorage.read("isFirstTime") != true
-          ? Get.offAll(() => const LoginScreen())
-          : Get.offAll(() => const OnboardingScreen());
+          ? Get.offAllNamed(Routes.login)
+          : Get.offAllNamed(Routes.onboarding);
     }
   }
 
@@ -175,7 +181,7 @@ class AuthenticationRepository extends GetxController {
   Future<void> logout() async {
     try {
       await FirebaseAuth.instance.signOut();
-      Get.offAll(() => const LoginScreen());
+      Get.offAllNamed(Routes.login);
     } on FirebaseAuthException catch (e) {
       throw "${e.code} - FirebaseAuthException : ${e.message}";
     } on FirebaseException catch (e) {
@@ -196,7 +202,7 @@ class AuthenticationRepository extends GetxController {
         await UserRepository.instance.removeUserRecord(_auth.currentUser!.uid);
         await _auth.currentUser?.delete();
         await FirebaseAuth.instance.signOut();
-        Get.offAll(() => const LoginScreen());
+        Get.offAllNamed(Routes.login);
       } on FirebaseAuthException catch (e) {
         throw "${e.code} - FirebaseAuthException : ${e.message}";
       } on FirebaseException catch (e) {

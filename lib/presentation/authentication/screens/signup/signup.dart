@@ -10,27 +10,30 @@ class SignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.primaryColor,
-      appBar: AppBar(),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(AppSizes.defaultSpace),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              /// Title
-              Text(
-                AppTextStrings.signUp,
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: AppColors.primaryColor,
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(AppSizes.defaultSpace),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: AppSizes.appBarHeight * 2),
 
-              const SizedBox(height: AppSizes.spaceBtwSections),
-
-              /// Form
-              const SiajSignUpForm(),
-
-            ],
+                /// Title
+                Text(
+                  AppTextStrings.signUp,
+                  style: Theme.of(context).textTheme.headlineMedium,
+                ),
+      
+                const SizedBox(height: AppSizes.spaceBtwSections),
+      
+                /// Form
+                const SiajSignUpForm(),
+      
+              ],
+            ),
           ),
         ),
       ),

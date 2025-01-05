@@ -7,16 +7,15 @@ import 'package:lk_cric_park/utils/validators/validation.dart';
 
 import '../../../controllers/login/login_controller.dart';
 import '../../password_configuration/forget_password.dart';
-import '../../signup/signup.dart';
 
-class SiajLoginForm extends StatelessWidget {
+class SiajLoginForm extends GetView<LoginController> {
   const SiajLoginForm({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(LoginController());
+
     return Form(
       key: controller.loginFormKey,
         child: Padding(
