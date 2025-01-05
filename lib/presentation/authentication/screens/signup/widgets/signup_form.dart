@@ -7,14 +7,13 @@ import 'package:lk_cric_park/presentation/authentication/controllers/signup/sign
 import 'package:lk_cric_park/presentation/authentication/screens/signup/widgets/terms_conditions_checkbox.dart';
 import 'package:lk_cric_park/utils/validators/validation.dart';
 
-class SiajSignUpForm extends StatelessWidget {
+class SiajSignUpForm extends GetView<SignupController> {
   const SiajSignUpForm({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(SignupController());
     return Form(
       key: controller.signupFormKey,
         child: Column(
@@ -43,18 +42,6 @@ class SiajSignUpForm extends StatelessWidget {
             ),
           ),
         ]),
-
-        const SizedBox(height: AppSizes.spaceBtwInputFields),
-
-        /// Username
-        TextFormField(
-          controller: controller.userName,
-          validator: (value) => SiajValidator.validateEmptyText("Username", value),
-          expands: false,
-          decoration:  InputDecoration(
-              labelText: AppTextStrings.username,
-              prefixIcon: Icon(Iconsax.user_edit)),
-        ),
 
         const SizedBox(height: AppSizes.spaceBtwInputFields),
 
