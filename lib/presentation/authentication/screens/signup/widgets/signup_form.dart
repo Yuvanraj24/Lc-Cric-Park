@@ -8,9 +8,7 @@ import 'package:lk_cric_park/presentation/authentication/screens/signup/widgets/
 import 'package:lk_cric_park/utils/validators/validation.dart';
 
 class SiajSignUpForm extends GetView<SignupController> {
-  const SiajSignUpForm({
-    super.key,
-  });
+  const SiajSignUpForm({super.key});
 
   @override
   Widget build(BuildContext context) {
