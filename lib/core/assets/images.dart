@@ -15,7 +15,7 @@ class AppImages {
 
   /// Animations
   static const String authLottie = 'assets/images/animations/auth_login_lottie.json';
-  static String successfullyRegisterAnimation = "assets/images/animations/72462-check-register.json";
+  static String successfullyRegisterAnimation = "assets/images/animations/register_user_success.json";
 
   static const String deliveredEmailIllustration =
       "assets/images/animations/sammy-line-man-receives-a-mail.png";

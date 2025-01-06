@@ -11,7 +11,7 @@ class SiajFloatingActionButtonTheme {
         color: AppColors.appWhite.withOpacity(.5)
       )
     ),
-    backgroundColor: AppColors.darkPurple,
+    backgroundColor: AppColors.appWhite,
     elevation: 1,
     foregroundColor: AppColors.appWhite,
     // splashColor: AppColors.darkPurple.withOpacity(10),

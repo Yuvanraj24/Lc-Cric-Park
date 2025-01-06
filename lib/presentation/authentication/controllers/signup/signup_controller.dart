@@ -85,7 +85,7 @@ class SignupController extends GetxController {
           title: "Congratulations",
           message: "Your account has been created Verify email to continue.");
 
-      VerifyEmailController.instance.userEmail = email.text;
+      // VerifyEmailController.instance.userEmail = email.text;
 
       // Move to verify email screen
       Get.toNamed(Routes.verifyEmailView);

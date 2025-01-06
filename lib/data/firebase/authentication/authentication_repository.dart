@@ -19,31 +19,19 @@ class AuthenticationRepository extends GetxController {
 
   /// Call from main.dart on app Launch
   @override
-  void onReady() {
-    print("On Ready Authentication");
-    // Redirect to the appropriate  screen
-    // screenRedirect();
-  }
+  void onReady() {}
 
   /// Functions to determine the relevant screen and redirect accordingly
   screenRedirect() async {
     final user = _auth.currentUser;
+    print("current user is --> $user");
     if (user != null) {
       // If the user is logged in
       if (user.emailVerified) {
         // If the user's email is verified, navigate to the main Navigation Menu
         Get.offAllNamed(Routes.mainView);
       } else {
-
-        Get.put(VerifyEmailController());
-        VerifyEmailController.instance.userEmail = _auth.currentUser?.email ?? '';
-        // If the user's email is not verified, navigate to the main Verification Email Screen
-        Get.offAllNamed(Routes.verifyEmailView);
-
-        // Get.offAllNamed(
-        //   '/verify-email',
-        //   arguments: {'email': _auth.currentUser?.email},
-        // );
+        Get.offAllNamed(Routes.verifyEmailView,arguments: {'email': _auth.currentUser?.email});
       }
     } else {
       // Local Storage

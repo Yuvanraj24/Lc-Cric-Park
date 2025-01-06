@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: SiajAppTheme.darkTheme,
+      theme: SiajAppTheme.lightTheme,
       darkTheme: SiajAppTheme.darkTheme,
       getPages: AppRoutes.pages,
       initialRoute: Routes.splash,

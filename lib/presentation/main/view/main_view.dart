@@ -10,6 +10,7 @@ class MainView extends GetView<MainController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+
         body: Obx(() => controller.screens[controller.selectedIndex.value]),
         bottomNavigationBar: Obx(
                 () => NavigationBar(

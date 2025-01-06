@@ -13,6 +13,7 @@ class VerifyEmailScreen extends GetView<VerifyEmailController> {
 
   @override
   Widget build(BuildContext context) {
+    final userEmail = Get.arguments['email'];
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -31,7 +32,7 @@ class VerifyEmailScreen extends GetView<VerifyEmailController> {
             ///Image
             Image(
               image: AssetImage(AppImages.deliveredEmailIllustration),
-              width: SiajHelperFunctions.screenWidth() * 0.6,
+              width: SiajHelperFunctions.screenWidth() * 0.6
             ),
             const SizedBox(height: AppSizes.spaceBtwSections),
 
@@ -40,7 +41,7 @@ class VerifyEmailScreen extends GetView<VerifyEmailController> {
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center),
             const SizedBox(height: AppSizes.spaceBtwItems),
-            Text(controller.userEmail ?? "",
+            Text(userEmail ?? "",
                 style: Theme.of(context).textTheme.labelLarge,
                 textAlign: TextAlign.center),
             const SizedBox(height: AppSizes.spaceBtwItems),
@@ -65,9 +66,7 @@ class VerifyEmailScreen extends GetView<VerifyEmailController> {
                   onPressed: () => controller.sendEmailVerification(),
                   child: Text(AppTextStrings.resendEmail)),
             ),
-          ],
-        ),
-      )),
-    );
+          ])
+      )));
   }
 }

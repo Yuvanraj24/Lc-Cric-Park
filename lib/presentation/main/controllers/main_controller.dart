@@ -14,26 +14,23 @@ class MainController extends GetxController {
     super.onInit();
   }
 
-  final RxInt selectedIndex = 3.obs;
+  final RxInt selectedIndex = 2.obs;
 
   final List<Widget> screens = [
     Center(child: InkWell(
         onTap: (){
           AppLocalStorageFunctions.clearAllData();
           Get.offAllNamed(Routes.login);
-
         },
         child: Text("Home"))),
-    Center(child: Text("Store")),
-    Center(child: Text("Cart")),
+    Center(child: Text("Location")),
     Center(child: Text("Profile")),
   ];
 
   final iconTabs = <NavigationDestination> [
       NavigationDestination(icon: Icon(Iconsax.home), label: "Home"),
-      NavigationDestination(icon: Icon(Iconsax.shop), label: "Store"),
-      NavigationDestination(icon: Icon(Iconsax.shopping_cart), label: "Cart"),
-      NavigationDestination(icon: Icon(Iconsax.user), label: "Profile"),
+      NavigationDestination(icon: Icon(Iconsax.location), label: "Location"),
+      NavigationDestination(icon: Icon(Iconsax.user), label: "Profile")
   ];
 
 }

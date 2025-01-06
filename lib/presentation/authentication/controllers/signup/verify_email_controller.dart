@@ -17,13 +17,13 @@ class VerifyEmailController extends GetxController {
   @override
   void onInit() {
     // TODO: implement onInit
-    sendEmailVerification();
-    setTimeForAutoRedirect();
+    // sendEmailVerification();
+    // setTimeForAutoRedirect();
     super.onInit();
   }
 
-  /// Send Email Verification link
 
+  /// Send Email Verification link
   sendEmailVerification() async {
     try {
       await AuthenticationRepository.instance.sendEmailVerification();
