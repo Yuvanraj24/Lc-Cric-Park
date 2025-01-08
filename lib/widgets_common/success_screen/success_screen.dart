@@ -7,8 +7,9 @@ import 'package:lk_cric_park/utils/styles/spacing_styles.dart';
 import 'package:lottie/lottie.dart';
 
 class SuccessScreen extends StatelessWidget {
-  const SuccessScreen({super.key, required this.image, required this.title, required this.subTitle, required this.onPressed});
+  const SuccessScreen({super.key, this.isImage = false, required this.image , required this.title, required this.subTitle, required this.onPressed});
 
+  final bool isImage;
   final String image, title, subTitle;
   final VoidCallback onPressed;
 
@@ -22,10 +23,12 @@ class SuccessScreen extends StatelessWidget {
 
 
                 ///Image
-                // Image(
-                //   image:  AssetImage(image),
-                //   width: SiajHelperFunctions.screenWidth() * 0.6,
-                // ),
+                if(isImage)
+                Image(
+                  image:  AssetImage(image),
+                  width: SiajHelperFunctions.screenWidth() * 0.6,
+                ),
+                if(!isImage)
                 Lottie.asset(image),
 
 

@@ -21,8 +21,11 @@ class AppImages {
       "assets/images/animations/sammy-line-man-receives-a-mail.png";
 
 
-  static const String verifyIllustration =
-      "assets/images/animations/sammy-line-travel-backpack-with-passport-and-air-ticket.gif";
+  static const String verifyIllustration = "assets/images/animations/sammy-line-travel-backpack-with-passport-and-air-ticket.gif";
+
+
+  static const String userDefault = "assets/images/logo/user.png";
+
 
 
 }
