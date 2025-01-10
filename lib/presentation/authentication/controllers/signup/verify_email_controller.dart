@@ -56,7 +56,7 @@ class VerifyEmailController extends GetxController {
  checkEmailVerificationStatus() async {
     print("Function called...");
     final currentUser = FirebaseAuth.instance.currentUser;
-    print("print 1 ${currentUser}");
+    print("print 1 $currentUser");
     print("print 2 ${currentUser?.emailVerified}");
     if(currentUser != null && currentUser.emailVerified){
       Get.off(() => SuccessScreen(
