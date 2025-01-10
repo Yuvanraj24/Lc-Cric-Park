@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:lk_cric_park/core/routes/pages.dart';
 import 'package:lk_cric_park/presentation/personalization/screens/profile/profile.dart';
+import 'package:lk_cric_park/presentation/personalization/screens/settings/settings.dart';
 import 'package:lk_cric_park/utils/local_storage/functions/app_storage_functions.dart';
 
 class MainController extends GetxController {
@@ -25,7 +26,7 @@ class MainController extends GetxController {
         },
         child: Text("Dashboard"))),
     Center(child: Text("Location")),
-   ProfileScreen()
+    SettingsScreen()
   ];
 
   final iconTabs = <NavigationDestination> [

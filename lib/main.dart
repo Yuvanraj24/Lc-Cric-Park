@@ -28,11 +28,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: SiajAppTheme.lightTheme,
+      theme: SiajAppTheme.darkTheme,
       darkTheme: SiajAppTheme.darkTheme,
       getPages: AppRoutes.pages,
-      initialRoute: Routes.splash,
-        initialBinding: VerificationEmailBinding(),
+      initialRoute: Routes.splash
     );
   }
 }

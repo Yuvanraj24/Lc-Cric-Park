@@ -22,6 +22,7 @@ class AuthenticationRepository extends GetxController {
   void onReady() {}
 
   /// Functions to determine the relevant screen and redirect accordingly
+
   screenRedirect() async {
     final user = _auth.currentUser;
     print("current user is --> $user");

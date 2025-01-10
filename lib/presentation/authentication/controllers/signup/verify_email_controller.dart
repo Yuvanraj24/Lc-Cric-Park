@@ -11,7 +11,7 @@ class VerifyEmailController extends GetxController {
   static VerifyEmailController get instance => Get.find();
 
 
-  String userEmail = "";
+  RxString userEmail = "".obs;
 
   /// Send Email whenever verify screen appears & set timer for auto redirect
   @override
@@ -54,7 +54,10 @@ class VerifyEmailController extends GetxController {
 
   /// Manually check if Email verified
  checkEmailVerificationStatus() async {
+    print("Function called...");
     final currentUser = FirebaseAuth.instance.currentUser;
+    print("print 1 ${currentUser}");
+    print("print 2 ${currentUser?.emailVerified}");
     if(currentUser != null && currentUser.emailVerified){
       Get.off(() => SuccessScreen(
           image: AppImages.successfullyRegisterAnimation,

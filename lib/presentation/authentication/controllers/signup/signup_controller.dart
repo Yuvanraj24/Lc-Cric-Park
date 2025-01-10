@@ -88,7 +88,7 @@ class SignupController extends GetxController {
       // VerifyEmailController.instance.userEmail = email.text;
 
       // Move to verify email screen
-      Get.toNamed(Routes.verifyEmailView);
+      Get.toNamed(Routes.verifyEmailView,arguments: {'email': email.text.trim()});
     } catch (e) {
       // show some Generic Error to the user
       SiajToasts.errorSnackBar(title: "On Snap!", message: e.toString());

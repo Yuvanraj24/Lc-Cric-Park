@@ -46,6 +46,7 @@ class AppRoutes {
       page: () => const VerifyEmailScreen(),
     ),
     GetPage(
-        name: _Paths.mainView, binding: MainBinding(), page: () => MainView())
+        name: _Paths.mainView, binding: MainBinding(),
+        page: () => MainView())
   ];
 }
