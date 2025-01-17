@@ -34,7 +34,6 @@ class ProfileScreen extends StatelessWidget {
                   children: [
                     Obx(() {
                       final networkImage = "";
-                          // controller.user.value.profilePicture;
                       final image = networkImage.isNotEmpty
                           ? networkImage
                           : AppImages.userDefault;
@@ -43,6 +42,8 @@ class ProfileScreen extends StatelessWidget {
                           ? const SiajShimmerEffect(
                               width: 80, height: 80, radius: 80)
                           : SiajCircularImage(
+                              isImage: false,
+                              imageHolderText: controller.user.value.fullName,
                               image: image,
                               width: 80,
                               height: 80,
@@ -72,11 +73,6 @@ class ProfileScreen extends StatelessWidget {
                 title: "Name",
                 value: controller.user.value.fullName,
               ),
-              // SiajProfileMenu(
-              //   onPressed: () {},
-              //   title: "Username",
-              //   value: controller.user.value.userName,
-              // ),
 
               const SizedBox(height: AppSizes.spaceBtwItems),
               const Divider(),

@@ -55,30 +55,33 @@ class SettingsScreen extends StatelessWidget {
                   SiajSettingsMenuTile(
                       icon: Iconsax.safe_home,
                       title: "My Addresses",
-                      subTitle: "Set shopping delivery address",
+                      subTitle: "Enter a verified address",
                       onTap: () {}),
+
                   const SiajSettingsMenuTile(
-                      icon: Iconsax.shopping_cart,
-                      title: "My Cart",
-                      subTitle: "Add, remove products and move to checkout"),
+                      icon: Icons.history,
+                      title: "History",
+                      subTitle: "Check your past record"),
+
                   SiajSettingsMenuTile(
                     icon: Iconsax.bag_tick,
-                    title: "My Orders",
-                    subTitle: "In-progress and Completed Orders",
+                    title: "Booked Slots",
+                    subTitle: "Upcoming records",
                     onTap: () {},
                   ),
+
                   const SiajSettingsMenuTile(
-                      icon: Iconsax.bank,
-                      title: "Bank Account",
-                      subTitle: "Withdraw balance to registered bank account"),
-                  const SiajSettingsMenuTile(
-                      icon: Iconsax.discount_shape,
-                      title: "My Coupons",
-                      subTitle: "List of all the discounted coupons"),
+                      icon: Icons.sports,
+                      title: "Tournaments",
+                      subTitle: "Enter with your Team"
+                  ),
+                  
+
                   const SiajSettingsMenuTile(
                       icon: Iconsax.notification,
                       title: "Notifications",
                       subTitle: "Set any kind of notification message"),
+
                   const SiajSettingsMenuTile(
                       icon: Iconsax.security_card,
                       title: "Account Privacy",

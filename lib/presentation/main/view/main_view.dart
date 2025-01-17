@@ -10,7 +10,6 @@ class MainView extends GetView<MainController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-
         body: Obx(() => controller.screens[controller.selectedIndex.value]),
         bottomNavigationBar: Obx(
                 () => NavigationBar(
@@ -18,7 +17,7 @@ class MainView extends GetView<MainController> {
                 elevation: 0,
                 selectedIndex: controller.selectedIndex.value,
                 onDestinationSelected: (index) => controller.selectedIndex.value = index,
-                backgroundColor: AppColors.light,
+                backgroundColor: AppColors.primaryColor.withValues(alpha:.1),
                 indicatorColor:  AppColors.primaryColor.withValues(alpha:.1),
                 destinations:  controller.iconTabs
                 )

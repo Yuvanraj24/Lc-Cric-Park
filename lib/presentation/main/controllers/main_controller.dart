@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:lk_cric_park/core/routes/pages.dart';
+import 'package:lk_cric_park/presentation/home/screens/home.dart';
 import 'package:lk_cric_park/presentation/personalization/screens/profile/profile.dart';
 import 'package:lk_cric_park/presentation/personalization/screens/settings/settings.dart';
 import 'package:lk_cric_park/utils/local_storage/functions/app_storage_functions.dart';
@@ -19,12 +20,7 @@ class MainController extends GetxController {
   final RxInt selectedIndex = 2.obs;
 
   final List<Widget> screens = [
-    Center(child: InkWell(
-        onTap: (){
-          AppLocalStorageFunctions.clearAllData();
-          Get.offAllNamed(Routes.login);
-        },
-        child: Text("Dashboard"))),
+    HomeScreen(),
     Center(child: Text("Location")),
     SettingsScreen()
   ];

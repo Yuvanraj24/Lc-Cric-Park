@@ -19,7 +19,9 @@ class SiajUserProfileTile extends StatelessWidget {
 
     final controller = UserController.instance;
     return ListTile(
-      leading: const SiajCircularImage(
+      leading:  SiajCircularImage(
+        isImage: false,
+        imageHolderText: controller.user.value.fullName.split('').first,
         image: AppImages.userDefault,
         width: 50,
         height: 50,
