@@ -61,7 +61,9 @@ class SiajCircularImage extends StatelessWidget {
                       image: AssetImage(image) as ImageProvider,
                       color: overlayColor,
                     )
-              : Text(imageHolderText ?? ''),
+              : Text(imageHolderText ?? '',style: Theme.of(context).textTheme.titleMedium!.copyWith(
+            fontWeight: FontWeight.bold
+          ))
         ),
       ),
     );

@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:lk_cric_park/core/assets/images.dart';
 import 'package:lk_cric_park/core/assets/texts.dart';
 import 'package:lk_cric_park/core/constants/app_sizes.dart';
-import 'package:lk_cric_park/data/firebase/authentication/authentication_repository.dart';
+import 'package:lk_cric_park/data/repositories/authentication/authentication_repository.dart';
 import 'package:lk_cric_park/presentation/authentication/controllers/signup/verify_email_controller.dart';
 import 'package:lk_cric_park/utils/helpers/helper_functions.dart';
 

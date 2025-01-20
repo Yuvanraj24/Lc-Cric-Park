@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lk_cric_park/core/assets/images.dart';
-import 'package:lk_cric_park/data/firebase/authentication/authentication_repository.dart';
+import 'package:lk_cric_park/data/repositories/authentication/authentication_repository.dart';
 import 'package:lk_cric_park/data/services/network_manager/network_manager.dart';
 import 'package:lk_cric_park/presentation/authentication/screens/password_configuration/reset_password.dart';
 import 'package:lk_cric_park/utils/popups/full_screen_loader.dart';

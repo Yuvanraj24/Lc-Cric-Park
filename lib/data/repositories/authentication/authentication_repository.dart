@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:lk_cric_park/core/routes/pages.dart';
-import 'package:lk_cric_park/data/firebase/user/user_repository.dart';
+import 'package:lk_cric_park/data/repositories/user/user_repository.dart';
 import 'package:lk_cric_park/presentation/authentication/controllers/signup/verify_email_controller.dart';
 
 

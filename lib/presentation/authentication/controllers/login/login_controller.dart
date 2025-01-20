@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:lk_cric_park/core/assets/images.dart';
-import 'package:lk_cric_park/data/firebase/authentication/authentication_repository.dart';
+import 'package:lk_cric_park/data/repositories/authentication/authentication_repository.dart';
 import 'package:lk_cric_park/data/services/network_manager/network_manager.dart';
 import 'package:lk_cric_park/utils/popups/full_screen_loader.dart';
 import 'package:lk_cric_park/widgets_common/custom_toasts/toasts.dart';

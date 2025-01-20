@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:lk_cric_park/data/firebase/user/user_repository.dart';
+import 'package:lk_cric_park/data/repositories/user/user_repository.dart';
 import 'package:lk_cric_park/presentation/authentication/models/user/user_model.dart';
 
 

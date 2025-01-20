@@ -18,23 +18,25 @@ class SiajUserProfileTile extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final controller = UserController.instance;
-    return ListTile(
-      leading:  SiajCircularImage(
-        isImage: false,
-        imageHolderText: controller.user.value.fullName.split('').first,
-        image: AppImages.userDefault,
-        width: 50,
-        height: 50,
-        padding: 0,
+    return Obx(
+      () => ListTile(
+        leading:  SiajCircularImage(
+          isImage: false,
+          imageHolderText: controller.user.value.fullName.split('').first,
+          image: AppImages.userDefault,
+          width: 50,
+          height: 50,
+          padding: 0,
+        ),
+        title: Text(controller.user.value.fullName,
+          style: Theme.of(context).textTheme.headlineSmall!.apply(color: AppColors.white),
+        ),
+        subtitle:  Text(controller.user.value.email,
+          style: Theme.of(context).textTheme.bodyMedium!.apply(color: AppColors.white),
+        ),
+        trailing: IconButton(onPressed: onPress,
+            icon: const Icon(Iconsax.edit, color: AppColors.white)),
       ),
-      title: Text(controller.user.value.fullName,
-        style: Theme.of(context).textTheme.headlineSmall!.apply(color: AppColors.white),
-      ),
-      subtitle:  Text(controller.user.value.email,
-        style: Theme.of(context).textTheme.bodyMedium!.apply(color: AppColors.white),
-      ),
-      trailing: IconButton(onPressed: onPress,
-          icon: const Icon(Iconsax.edit, color: AppColors.white)),
     );
   }
 }

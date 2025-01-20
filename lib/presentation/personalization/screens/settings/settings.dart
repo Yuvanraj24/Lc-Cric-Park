@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:lk_cric_park/core/constants/app_sizes.dart';
-import 'package:lk_cric_park/core/routes/pages.dart';
 import 'package:lk_cric_park/core/theme/color.dart';
-import 'package:lk_cric_park/data/firebase/authentication/authentication_repository.dart';
+import 'package:lk_cric_park/data/repositories/authentication/authentication_repository.dart';
 import 'package:lk_cric_park/presentation/personalization/controllers/user_controller.dart';
 import 'package:lk_cric_park/widgets_common/appbar/appbar.dart';
 import 'package:lk_cric_park/widgets_common/custom_shapes/containers/primary_header_container.dart';
@@ -18,30 +17,29 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(UserController());
-    return Scaffold(
-      body: SingleChildScrollView(
+    return SingleChildScrollView(
         child: Column(
           children: [
             /// Header
             SiajPrimaryHeaderContainer(
                 child: Column(
-              children: [
-                /// Appbar
-                SiajAppBar(
-                  title: Text("Account",
-                      style: Theme.of(context)
-                          .textTheme
-                          .headlineMedium!
-                          .apply(color: AppColors.appWhite)),
-                ),
-                const SizedBox(height: AppSizes.spaceBtwSections),
+                  children: [
+                    /// Appbar
+                    SiajAppBar(
+                      title: Text("Account",
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium!
+                              .apply(color: AppColors.appWhite)),
+                    ),
+                    const SizedBox(height: AppSizes.spaceBtwSections),
 
-                /// User Profile Card
-                SiajUserProfileTile(onPress: () {}),
+                    /// User Profile Card
+                    SiajUserProfileTile(onPress: () {}),
 
-                const SizedBox(height: AppSizes.spaceBtwSections)
-              ],
-            )),
+                    const SizedBox(height: AppSizes.spaceBtwSections)
+                  ],
+                )),
 
             /// Body
             Padding(
@@ -53,9 +51,9 @@ class SettingsScreen extends StatelessWidget {
                   const SizedBox(height: AppSizes.spaceBtwItems),
 
                   SiajSettingsMenuTile(
-                      icon: Iconsax.safe_home,
-                      title: "My Addresses",
-                      subTitle: "Enter a verified address",
+                      icon: Iconsax.people,
+                      title: "My Teams",
+                      subTitle: "View your teams",
                       onTap: () {}),
 
                   const SiajSettingsMenuTile(
@@ -75,7 +73,7 @@ class SettingsScreen extends StatelessWidget {
                       title: "Tournaments",
                       subTitle: "Enter with your Team"
                   ),
-                  
+
 
                   const SiajSettingsMenuTile(
                       icon: Iconsax.notification,
@@ -134,8 +132,6 @@ class SettingsScreen extends StatelessWidget {
               ),
             )
           ],
-        ),
-      ),
-    );
+        ));
   }
 }

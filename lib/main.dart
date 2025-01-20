@@ -4,9 +4,8 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:lk_cric_park/core/routes/pages.dart';
 import 'package:lk_cric_park/core/theme/theme.dart';
-import 'package:lk_cric_park/presentation/authentication/bindings/signup/verification_email_binding.dart';
+import 'package:lk_cric_park/data/repositories/authentication/authentication_repository.dart';
 
-import 'data/firebase/authentication/authentication_repository.dart';
 import 'data/services/network_manager/network_manager.dart';
 import 'firebase_options.dart';
 
