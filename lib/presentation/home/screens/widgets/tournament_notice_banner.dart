@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lk_cric_park/core/theme/color.dart';
+import 'package:lk_cric_park/widgets_common/custom_shapes/containers/rounded_container.dart';
 
 class TournamentNoticeBanner extends StatelessWidget {
   const TournamentNoticeBanner({
@@ -8,39 +9,36 @@ class TournamentNoticeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SiajRoundedContainer(
       width: double.infinity,
-      margin: const EdgeInsets.all(20),
-      padding: const EdgeInsets.symmetric(
-        horizontal: 20,
-        vertical: 16,
-      ),
-      decoration: BoxDecoration(
-        color: AppColors.primaryColor,
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: const Text.rich(
-        TextSpan(
-          style: TextStyle(color: Colors.white),
-          children: [
-            TextSpan(text: "Tournament\n"),
-            TextSpan(
-              text: "Price value ",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            TextSpan(
-              text: "\u{20B9} 50,000",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
+      borderColor: AppColors.primaryColor.withValues(alpha: .2),
+      showBorder: true,
+      padding: EdgeInsets.all(10),
+      backgroundColor: AppColors.appWhite.withValues(alpha: .9),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.grey,
+          blurRadius: 1.0,
+          offset: Offset(0, 2)
         ),
-      ),
+      ],
+
+      child: Row(
+        children: [
+          Icon(Icons.sports_cricket,
+          color: AppColors.green,
+          ),
+          Column(
+            children: [
+              Text("Tournament",
+              style: Theme.of(context).textTheme.headlineSmall),
+              Text("Rs 35000",
+              style: Theme.of(context).textTheme.labelLarge),
+            ],
+          )
+
+        ],
+      )
     );
   }
 }

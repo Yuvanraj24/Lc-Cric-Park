@@ -11,7 +11,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primaryColor,
+      // backgroundColor: AppColors.primaryColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: SiajSpacingStyle.paddingWithAppBarHeight,

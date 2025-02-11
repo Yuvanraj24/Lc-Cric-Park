@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static const primaryColor = Color.fromRGBO(0, 14, 43, .5);
-  static const woodColor =   Color.fromRGBO(150, 111, 51 , 1);
+  static const woodColor = Color.fromRGBO(150, 111, 51, 1);
   static const darkPurple = Color(0xFF591057);
   static const appWhite = Color(0xFFFFFFFF);
   static const appBlack = Color(0xFF171D1B);
+
+  static Color green = Colors.green.shade600;
 
   static const Color yellowStart = Color(0xFFFFDD00);
   static const Color orangeEnd = Color(0xFFF49600);
@@ -29,11 +31,10 @@ class AppColors {
     stops: [0.2806, 0.9899], // Gradient stops
   );
 
-
   // Text Colors
   static const Color textPrimary = Color(0xFF333333);
   static const Color textSecondary = Color(0xFF6C757D);
-  static const Color textWhite = Colors.white;
+  static const Color textWhite = Colors.white70;
 
   // Background Colors
   static const Color light = Color(0xFFF6F6F6);
@@ -50,7 +51,7 @@ class AppColors {
   static Color buttonDisabled = const Color(0xFFC4C4C4);
 
   // Border Colors
-  static const Color borderPrimary =  Color(0xFFD9D9D9);
+  static const Color borderPrimary = Color(0xFFD9D9D9);
   static const Color borderSecondary = Color(0xFFE6E6E6);
 
   // Error and validation colors
@@ -67,5 +68,4 @@ class AppColors {
   static const Color softGrey = Color(0xFFF4F4F4);
   static const Color lightGrey = Color(0xFFF9F9F9);
   static const Color white = Color(0xFFFFFFFF);
-
 }

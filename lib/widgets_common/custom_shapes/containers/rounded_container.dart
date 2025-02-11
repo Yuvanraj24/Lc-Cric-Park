@@ -13,7 +13,9 @@ class SiajRoundedContainer extends StatelessWidget {
       this.borderColor = AppColors.borderPrimary,
       this.backgroundColor,
       this.padding,
-      this.margin});
+      this.margin, this.boxShadow
+
+      });
 
   final double? width, height;
   final double radius;
@@ -23,6 +25,7 @@ class SiajRoundedContainer extends StatelessWidget {
   final Color? backgroundColor;
   final EdgeInsetsGeometry? padding;
   final EdgeInsetsGeometry? margin;
+  final List<BoxShadow>? boxShadow;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +37,8 @@ class SiajRoundedContainer extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(radius),
-        border: showBorder ? Border.all(color: borderColor) : null
+        border: showBorder ? Border.all(color: borderColor) : null,
+        boxShadow: boxShadow
       ),
       child: child,
     );

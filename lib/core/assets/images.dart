@@ -35,5 +35,7 @@ class AppImages {
   static const String banner3 = "assets/images/banners/banner3.jpg";
 
 
+  static const String userProfilePic = 'assets/images/content/user.png';
+
 
 }
